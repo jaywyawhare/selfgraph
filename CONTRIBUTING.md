@@ -34,7 +34,15 @@ to this repository.
 - A PR over 1,000 changed lines (additions plus deletions, lockfiles excluded) is not reviewed. Split it into stacked PRs: open the first against `main`, base each next one on the previous branch, and give the order in each description ("1/3", "2/3").
 - If your PR has a breaking change, describe it in the PR.
 - Raise every new error with a code and a hint, the same on the API, CLI, and MCP in both SDKs, and never show a password or token in it. [`AGENTS.md`](AGENTS.md) has the details.
-- Fill in the "AI Assistance" section of the PR template. Do not remove it. If the section is missing, the gate check fails. You are responsible for each line that you submit.
+- External contributors must fill in the "AI Assistance" section of the PR template. If it is missing, the gate check fails. You are responsible for each line that you submit.
+
+Use the PR template. Write the Summary in two or three nonempty lines, at most
+400 characters total. Keep decisions, validation results, limits, the linked
+issue, AI disclosure, checklist, and breaking changes inside the collapsed
+Implementation details block. Use `None.` for decisions or limits that do not
+apply. AI disclosure is `None.` or a filled Model/Effort table. The PR gate
+checks this format for external contributors. Maintainers and bots are exempt
+from these description requirements; existing gate overrides still apply.
 
 ## Build and test
 
